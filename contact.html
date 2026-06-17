@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inquiries - Sleek Ceramic Portfolio</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-dark text-light">
+
+    <!-- Centered Minimalist Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark py-4">
+        <div class="container justify-content-center">
+            <!-- Mobile Toggle Button -->
+            <button class="navbar-toggler mb-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <!-- Centered Links -->
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav gap-4 text-center">
+                    <li class="nav-item">
+                        <a class="nav-link text-lowercase" href="index.html">home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-lowercase" href="about.html">the artist</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active text-lowercase" href="contact.html">inquiries</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content Area -->
+    <main class="container my-5 py-4">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <h1 class="display-5 text-lowercase fw-light text-center mb-4">inquiries</h1>
+                <p class="text-muted text-center mb-5 small">let's collaborate. reach out for custom requests, commissions, or gallery representation.</p>
+
+                <!-- Inquiry Form -->
+                <form action="#" method="POST" class="needs-validation">
+                    <!-- Name Field -->
+                    <div class="mb-4">
+                        <label for="userName" class="form-label text-lowercase small text-muted">name</label>
+                        <input type="text" class="form-control bg-dark text-light border-secondary" id="userName" placeholder="your name" required>
+                    </div>
+
+                    <!-- Email Field with Validation -->
+                    <div class="mb-4">
+                        <label for="userEmail" class="form-label text-lowercase small text-muted">email address</label>
+                        <input type="email" class="form-control bg-dark text-light border-secondary" id="userEmail" placeholder="name@example.com" required>
+                        <div class="form-text text-muted simple-card-text extra-small">we'll never share your email.</div>
+                    </div>
+
+                    <!-- Custom Request / Inquiry Field -->
+                    <div class="mb-4">
+                        <label for="userMessage" class="form-label text-lowercase small text-muted">custom request details</label>
+                        <textarea class="form-control bg-dark text-light border-secondary" id="userMessage" rows="5" placeholder="describe the project, size, and style you have in mind..." required></textarea>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <div class="d-grid gap-2 pt-2">
+                        <button class="btn btn-outline-light text-lowercase fw-light" type="submit">send inquiry</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <!-- Bootstrap 5 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
