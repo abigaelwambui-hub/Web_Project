@@ -1,22 +1,88 @@
 <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HOME</title>
-    <link rel="stylesheet" href="css/style.css">
-<body>
-    
-    <div class="banner">
-        <h2> Home Page</h2>
-    </div>
+    <title>Sleek Ceramic Portfolio</title>
+    <!-- Updated Bootstrap 5 CSS CDN Link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css">
+</head>    
 
-    <main>
-        <p>Trial successful</p>
-        
-       
-        
-    </main>
+<body class="bg-dark text-light">
 
+    <!-- Centered Minimalist Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark py-4">
+        <div class="container justify-content-center">
+            <!-- Mobile Toggle Button -->
+            <button class="navbar-toggler mb-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <!-- Centered Links -->
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav gap-4 text-center">
+                    <li class="nav-item">
+                        <a class="nav-link active text-lowercase" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-lowercase" href="about.html">The Artist</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-lowercase" href="contact.html">Inquiries</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content Area -->
+    <!-- Main Content Area -->
+<main class="container my-5">
+    <!-- Category Grid Section -->
+    <section class="py-5">
+        <h2 class="text-center mb-5 text-lowercase fw-light">Collections</h2>
+        <div class="row g-4">
+            <!-- Category 1: Earthenware -->
+            <div class="col-md-4">
+                <div class="card bg-dark text-light border-secondary h-100">
+                    <img src="images/earthenware.jpeg" class="card-img-top object-fit-cover" alt="Earthenware collection" style="height: 300px;">
+                    
+                    <div class="card-body text-center">
+                        <h3 class="card-title h5 text-lowercase fw-light">Earthenware</h3>
+                        <p class="card-text text-muted small">Functional pieces exploring iron-rich raw clays.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Category 2: Sculptural Form -->
+            <div class="col-md-4">
+                <div class="card bg-dark text-light border-secondary h-100">
+                    
+                    <img src="images/sculpture.jpeg" class="card-img-top object-fit-cover" alt="Earthenware collection" style="height: 300px;">
+                    <div class="card-body text-center">
+                        <h3 class="card-title h5 text-lowercase fw-light">Sculptural form</h3>
+                        <p class="card-text text-muted small">Abstract studies in geometry, balance, and space.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Category 3: Glaze Studies -->
+            <div class="col-md-4">
+                <div class="card bg-dark text-light border-secondary h-100">
+                    
+                    <img src="images/glaze.jpeg" class="card-img-top object-fit-cover" alt="Earthenware collection" style="height: 300px;">
+                    <div class="card-body text-center">
+                        <h3 class="card-title h5 text-lowercase fw-light">Glaze studies</h3>
+                        <p class="card-text text-muted small">Experimental surfaces developed in the studio kiln.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+    <!-- Bootstrap 5 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
