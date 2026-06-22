@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Quotes Wall | Ink & Solitude</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body { background-color: #2b1e16; color: #f4eae1; font-family: 'Georgia', serif; }
+        .bg-walnut { background-color: #3d2b1f !important; }
+        .text-parchment { color: #f4eae1 !important; }
+        .text-parchment-muted { color: #c9af96 !important; opacity: 0.8; }
+        .border-parchment { border-color: #5c4331 !important; }
+        .quote-box { transition: transform 0.2s ease; }
+        .quote-box:hover { transform: translateY(-5px); }
+    </style>
+</head>
+<body>
+
+    <!-- Global Navbar -->
+    <nav class="navbar navbar-expand-xl bg-walnut border-bottom border-parchment py-3">
+        <div class="container-fluid">
+            <a class="navbar-brand text-parchment fw-bold" href="index.html">✒️ Ink & Solitude</a>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto text-uppercase fs-7 small">
+                    <li class="nav-item"><a class="nav-link text-parchment-muted mx-2" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link text-parchment-muted mx-2" href="weekly.html">Weekly Poem</a></li>
+                    <li class="nav-item"><a class="nav-link text-parchment-muted mx-2" href="poetry.html">Poetry Archive</a></li>
+                    <li class="nav-item"><a class="nav-link text-parchment-muted mx-2" href="writing.html">Prose & Essays</a></li>
+                    <li class="nav-item"><a class="nav-link text-parchment active fw-bold" href="quotes.html">Quotes Wall</a></li>
+                    <li class="nav-item"><a class="nav-link text-parchment-muted mx-2" href="inspiration.html">Inspiration</a></li>
+                    <li class="nav-item"><a class="nav-link text-parchment-muted mx-2" href="about.html">The Author</a></li>
+                    <li class="nav-item"><a class="nav-link text-parchment-muted mx-2" href="contact.html">Subscriptions</a></li>
+                    <li class="nav-item"><a class="nav-link text-parchment-muted mx-2" href="guestbook.html">Guestbook</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header Section -->
+    <header class="container text-center py-5 my-3">
+        <h1 class="display-5 fw-normal text-capitalize">The Quotes Wall</h1>
+        <p class="lead text-parchment-muted fs-6">A blend of personal fragments and borrowed wisdom written down in the margins.</p>
+    </header>
+
+    <!-- Quotes Masonry-Style Grid -->
+    <main class="container my-4">
+        <div class="row g-4">
+            
+            <!-- Quote 1: Original -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card bg-walnut border-parchment h-100 p-4 quote-box shadow-sm">
+                    <div class="card-body d-flex flex-column justify-content-between">
+                        <blockquote class="blockquote fs-5 text-parchment mb-4 italic">
+                            "We are all just unfinished stanzas, waiting for a midnight rain to wash away our rough drafts."
+                        </blockquote>
+                        <footer class="blockquote-footer text-parchment-muted small mt-2 border-top border-parchment pt-2">
+                            Original Thought
+                        </footer>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quote 2: Curated Choice -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card bg-walnut border-parchment h-100 p-4 quote-box shadow-sm">
+                    <div class="card-body d-flex flex-column justify-content-between">
+                        <blockquote class="blockquote fs-5 text-parchment mb-4 italic">
+                            "To write is human, to edit is divine."
+                        </blockquote>
+                        <footer class="blockquote-footer text-parchment-muted small mt-2 border-top border-parchment pt-2">
+                            Stephen King
+                        </footer>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quote 3: Original -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card bg-walnut border-parchment h-100 p-4 quote-box shadow-sm">
+                    <div class="card-body d-flex flex-column justify-content-between">
+                        <blockquote class="blockquote fs-5 text-parchment mb-4 italic">
+                            "The heaviest shadows are never cast by modern light, but by the quiet dust of ancient letters left unread."
+                        </blockquote>
+                        <footer class="blockquote-footer text-parchment-muted small mt-2 border-top border-parchment pt-2">
+                            Original Thought
+                        </footer>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quote 4: Curated Choice -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card bg-walnut border-parchment h-100 p-4 quote-box shadow-sm">
+                    <div class="card-body d-flex flex-column justify-content-between">
+                        <blockquote class="blockquote fs-5 text-parchment mb-4 italic">
+                            "Do not go gentle into that good night."
+                        </blockquote>
+                        <footer class="blockquote-footer text-parchment-muted small mt-2 border-top border-parchment pt-2">
+                            Dylan Thomas
+                        </footer>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quote 5: Original -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card bg-walnut border-parchment h-100 p-4 quote-box shadow-sm">
+                    <div class="card-body d-flex flex-column justify-content-between">
+                        <blockquote class="blockquote fs-5 text-parchment mb-4 italic">
+                            "Ink acts as blood's quiet interpreter when the throat chooses silence."
+                        </blockquote>
+                        <footer class="blockquote-footer text-parchment-muted small mt-2 border-top border-parchment pt-2">
+                            Original Thought
+                        </footer>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quote 6: Curated Choice -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card bg-walnut border-parchment h-100 p-4 quote-box shadow-sm">
+                    <div class="card-body d-flex flex-column justify-content-between">
+                        <blockquote class="blockquote fs-5 text-parchment mb-4 italic">
+                            "If the truth is harsh then a lie is equally kind."
+                        </blockquote>
+                        <footer class="blockquote-footer text-parchment-muted small mt-2 border-top border-parchment pt-2">
+                            Pixie
+                        </footer>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quote 7: Curated Choice -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card bg-walnut border-parchment h-100 p-4 quote-box shadow-sm">
+                    <div class="card-body d-flex flex-column justify-content-between">
+                        <blockquote class="blockquote fs-5 text-parchment mb-4 italic">
+                            "Just do whatever you wanna do I guarantee that it is the best for you."
+                        </blockquote>
+                        <footer class="blockquote-footer text-parchment-muted small mt-2 border-top border-parchment pt-2">
+                            Stray Kids 
+                        </footer>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Quote 8: Curated Choice -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card bg-walnut border-parchment h-100 p-4 quote-box shadow-sm">
+                    <div class="card-body d-flex flex-column justify-content-between">
+                        <blockquote class="blockquote fs-5 text-parchment mb-4 italic">
+                            "Yeah lets escape from reality."
+                        </blockquote>
+                        <footer class="blockquote-footer text-parchment-muted small mt-2 border-top border-parchment pt-2">
+                            Hwang Hyunjin
+                        </footer>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quote 9: Curated Choice -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card bg-walnut border-parchment h-100 p-4 quote-box shadow-sm">
+                    <div class="card-body d-flex flex-column justify-content-between">
+                        <blockquote class="blockquote fs-5 text-parchment mb-4 italic">
+                            "Special edition, and your AI couldn't copy."
+                        </blockquote>
+                        <footer class="blockquote-footer text-parchment-muted small mt-2 border-top border-parchment pt-2">
+                            Jennie Kim
+                        </footer>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quote 10: Curated Choice -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card bg-walnut border-parchment h-100 p-4 quote-box shadow-sm">
+                    <div class="card-body d-flex flex-column justify-content-between">
+                        <blockquote class="blockquote fs-5 text-parchment mb-4 italic">
+                            "If crying was fun I would be having the time of my life."
+                        </blockquote>
+                        <footer class="blockquote-footer text-parchment-muted small mt-2 border-top border-parchment pt-2">
+                            Jennie Kim
+                        </footer>
+                    </div>
+                </div>
+            </div>
+           
+            <!-- Quote 11: Curated Choice -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card bg-walnut border-parchment h-100 p-4 quote-box shadow-sm">
+                    <div class="card-body d-flex flex-column justify-content-between">
+                        <blockquote class="blockquote fs-5 text-parchment mb-4 italic">
+                            "I wrote down my feelings but they won't go away."
+                        </blockquote>
+                        <footer class="blockquote-footer text-parchment-muted small mt-2 border-top border-parchment pt-2">
+                            Tate McRae
+                        </footer>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Quote 12: Curated Choice -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card bg-walnut border-parchment h-100 p-4 quote-box shadow-sm">
+                    <div class="card-body d-flex flex-column justify-content-between">
+                        <blockquote class="blockquote fs-5 text-parchment mb-4 italic">
+                            ""I only see him as a friend,"the biggest lie i ever said."
+                        </blockquote>
+                        <footer class="blockquote-footer text-parchment-muted small mt-2 border-top border-parchment pt-2">
+                            Olivia Rodrigo
+                        </footer>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quote 13: Curated Choice -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card bg-walnut border-parchment h-100 p-4 quote-box shadow-sm">
+                    <div class="card-body d-flex flex-column justify-content-between">
+                        <blockquote class="blockquote fs-5 text-parchment mb-4 italic">
+                            "I wanna stay in this dream."
+                        </blockquote>
+                        <footer class="blockquote-footer text-parchment-muted small mt-2 border-top border-parchment pt-2">
+                            Jimin
+                        </footer>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quote 14: Curated Choice -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card bg-walnut border-parchment h-100 p-4 quote-box shadow-sm">
+                    <div class="card-body d-flex flex-column justify-content-between">
+                        <blockquote class="blockquote fs-5 text-parchment mb-4 italic">
+                            "Man on the screen, they only see what you want them to see."
+                        </blockquote>
+                        <footer class="blockquote-footer text-parchment-muted small mt-2 border-top border-parchment pt-2">
+                            Dove Cameron
+                        </footer>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quote 15: Curated Choice -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card bg-walnut border-parchment h-100 p-4 quote-box shadow-sm">
+                    <div class="card-body d-flex flex-column justify-content-between">
+                        <blockquote class="blockquote fs-5 text-parchment mb-4 italic">
+                            "I remember nothing so there is nothing to regret."
+                        </blockquote>
+                        <footer class="blockquote-footer text-parchment-muted small mt-2 border-top border-parchment pt-2">
+                            RAYE
+                        </footer>
+                    </div>
+                </div>
+            </div>
+
+            
+
+        </div>
+    </main>
+
+</body>
+</html>
