@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guestbook | Ink & Solitude</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body { background-color: #2b1e16; color: #f4eae1; font-family: 'Georgia', serif; }
+        .bg-walnut { background-color: #3d2b1f !important; }
+        .text-parchment { color: #f4eae1 !important; }
+        .text-parchment-muted { color: #c9af96 !important; opacity: 0.8; }
+        .border-parchment { border-color: #5c4331 !important; }
+        .form-control { background-color: #2b1e16 !important; border-color: #5c4331 !important; color: #f4eae1 !important; }
+        .form-control::placeholder { color: #8c7361 !important; }
+        .btn-sepia-outline { border-color: #c9af96; color: #c9af96; }
+        .btn-sepia-outline:hover { background-color: #c9af96; color: #2b1e16; }
+        .ledger-entry { border-bottom: 1px dashed #5c4331; }
+        .ledger-entry:last-child { border-bottom: none; }
+    </style>
+</head>
+<body>
+
+    <!-- Global Navbar -->
+    <nav class="navbar navbar-expand-xl bg-walnut border-bottom border-parchment py-3">
+        <div class="container-fluid">
+            <a class="navbar-brand text-parchment fw-bold" href="index.html">✒️ Ink & Solitude</a>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto text-uppercase fs-7 small">
+                    <li class="nav-item"><a class="nav-link text-parchment-muted mx-2" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link text-parchment-muted mx-2" href="weekly.html">Weekly Poem</a></li>
+                    <li class="nav-item"><a class="nav-link text-parchment-muted mx-2" href="poetry.html">Poetry Archive</a></li>
+                    <li class="nav-item"><a class="nav-link text-parchment-muted mx-2" href="writing.html">Prose & Essays</a></li>
+                    <li class="nav-item"><a class="nav-link text-parchment-muted mx-2" href="quotes.html">Quotes Wall</a></li>
+                    <li class="nav-item"><a class="nav-link text-parchment-muted mx-2" href="inspiration.html">Inspiration</a></li>
+                    <li class="nav-item"><a class="nav-link text-parchment-muted mx-2" href="about.html">The Author</a></li>
+                    <li class="nav-item"><a class="nav-link text-parchment-muted mx-2" href="contact.html">Subscriptions</a></li>
+                    <li class="nav-item"><a class="nav-link text-parchment active fw-bold" href="guestbook.html">Guestbook</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header Section -->
+    <header class="container text-center py-5 my-3">
+        <h1 class="display-5 fw-normal text-capitalize">The Ledger</h1>
+        <p class="lead text-parchment-muted fs-6">A permanent record for wandering readers to leave their trace behind.</p>
+    </header>
+
+    <!-- Guestbook Layout -->
+    <main class="container my-4 mb-5" style="max-width: 1000px;">
+        <div class="row g-5">
+            
+            <!-- Left Column: Sign the Ledger Form -->
+            <div class="col-lg-5">
+                <div class="card bg-walnut border-parchment p-4 shadow-lg sticky-top" style="top: 2rem;">
+                    <h2 class="h4 mb-4 text-capitalize fw-normal text-parchment text-center">Leave a Trace</h2>
+                    
+                    <form>
+                        <div class="mb-3">
+                            <label for="guestName" class="form-label text-parchment small text-uppercase">Your Name or Initial</label>
+                            <input type="text" class="form-control" id="guestName" placeholder="e.g., A Wandering Reader" required>
+                        </div>
+
+                        <div class="mb-4">
+                            <label for="guestMessage" class="form-label text-parchment small text-uppercase">Your Reflection</label>
+                            <textarea class="form-control" id="guestMessage" rows="5" placeholder="What thoughts did these pages awaken in you?" required></textarea>
+                        </div>
+
+                        <div class="d-grid">
+                            <button class="btn btn-sepia-outline text-capitalize fw-light py-2" type="submit">Sign the Ledger</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Right Column: Previous Entries -->
+            <div class="col-lg-7">
+                <div class="card bg-walnut border-parchment p-4 p-md-5 shadow-lg">
+                    <h2 class="h4 mb-4 text-capitalize fw-normal text-parchment">Recent Signatures</h2>
+                    
+                    <!-- Entry 1 -->
+                    <div class="py-4 ledger-entry">
+                        <p class="fs-5 lh-lg text-parchment italic mb-3">
+                            "A beautiful escape. Reading these pieces felt exactly like sitting in a quiet, dust-filled library while a heavy rain poured outside. Thank you for sharing your backend."
+                        </p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <strong class="text-parchment-muted font-monospace small">— Arthur Pendelton</strong>
+                            <span class="text-parchment-muted small font-monospace">June 2026</span>
+                        </div>
+                    </div>
+
+                    <!-- Entry 2 -->
+                    <div class="py-4 ledger-entry">
+                        <p class="fs-5 lh-lg text-parchment italic mb-3">
+                            "Your words capture a melancholic truth that I have carried for years but have never been able to properly articulate. The 'Architecture of Silence' deeply resonated with me."
+                        </p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <strong class="text-parchment-muted font-monospace small">— E.S.</strong>
+                            <span class="text-parchment-muted small font-monospace">May 2026</span>
+                        </div>
+                    </div>
+
+                    <!-- Entry 3 -->
+                    <div class="py-4 ledger-entry">
+                        <p class="fs-5 lh-lg text-parchment italic mb-3">
+                            "Stumbled upon this desk by chance. I am leaving a little lighter than when I arrived."
+                        </p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <strong class="text-parchment-muted font-monospace small">— Anonymous</strong>
+                            <span class="text-parchment-muted small font-monospace">April 2026</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
