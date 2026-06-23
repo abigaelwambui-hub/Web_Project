@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prose & Essays | Ink & Solitude</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body { background-color: #2b1e16; color: #f4eae1; font-family: 'Georgia', serif; }
+        .bg-walnut { background-color: #3d2b1f !important; }
+        .text-parchment { color: #f4eae1 !important; }
+        .text-parchment-muted { color: #c9af96 !important; opacity: 0.8; }
+        .border-parchment { border-color: #5c4331 !important; }
+        .btn-sepia-outline { border-color: #c9af96; color: #c9af96; }
+        .btn-sepia-outline:hover { background-color: #c9af96; color: #2b1e16; }
+        
+        /* Modal Custom Sepia Styling */
+        .modal-content { background-color: #3d2b1f; border: 1px solid #5c4331; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
+        /* Custom Scrollbar for Long Essays */
+        .modal-body::-webkit-scrollbar { width: 8px; }
+        .modal-body::-webkit-scrollbar-track { background: #2b1e16; }
+        .modal-body::-webkit-scrollbar-thumb { background: #5c4331; border-radius: 4px; }
+    </style>
+</head>
+<body>
+
+    <!-- Global Navbar -->
+    <nav class="navbar navbar-expand-xl bg-walnut border-bottom border-parchment py-3">
+        <div class="container-fluid">
+            <a class="navbar-brand text-parchment fw-bold" href="index.html">✒️ Ink & Solitude</a>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto text-uppercase fs-7 small">
+                    <li class="nav-item"><a class="nav-link text-parchment-muted mx-2" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link text-parchment-muted mx-2" href="weekly.html">Weekly Poem</a></li>
+                    <li class="nav-item"><a class="nav-link text-parchment-muted mx-2" href="poetry.html">Poetry Archive</a></li>
+                    <li class="nav-item"><a class="nav-link text-parchment active fw-bold" href="writing.html">Prose & Essays</a></li>
+                    <li class="nav-item"><a class="nav-link text-parchment-muted mx-2" href="quotes.html">Quotes Wall</a></li>
+                    <li class="nav-item"><a class="nav-link text-parchment-muted mx-2" href="inspiration.html">Inspiration</a></li>
+                    <li class="nav-item"><a class="nav-link text-parchment-muted mx-2" href="about.html">The Author</a></li>
+                    <li class="nav-item"><a class="nav-link text-parchment-muted mx-2" href="contact.html">Subscriptions</a></li>
+                    <li class="nav-item"><a class="nav-link text-parchment-muted mx-2" href="guestbook.html">Guestbook</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header Section -->
+    <header class="container text-center py-5 my-3">
+        <h1 class="display-5 fw-normal text-capitalize">Prose & Essays</h1>
+        <p class="lead text-parchment-muted fs-6">Longer journeys into the mind, character portraits, and reflections written in the margins.</p>
+    </header>
+
+    <!-- Writing Catalog -->
+    <main class="container my-4" style="max-width: 900px;">
+        
+        <!-- Story Card 1 -->
+        <article class="card bg-walnut border-parchment p-4 p-md-5 shadow-lg mb-4">
+            <div class="d-flex justify-content-between align-items-baseline mb-2">
+                <h2 class="h3 text-capitalize fw-normal text-parchment m-0">The Architecture of Silence</h2>
+                <span class="badge border border-parchment text-parchment-muted fw-normal rounded-pill px-3 py-2">5 Min Read</span>
+            </div>
+            <p class="text-parchment-muted small font-monospace mb-4">Personal Essay • Autumn</p>
+            <p class="fs-5 lh-lg text-parchment mb-4">
+                Silence is rarely empty. If you sit still long enough in an old house, you begin to realize that the absence of noise is actually a heavy, physical thing. It presses against the windowpanes alongside the rain, demanding to be acknowledged...
+            </p>
+            <div>
+                <button class="btn btn-sepia-outline px-4 text-capitalize fw-light" data-bs-toggle="modal" data-bs-target="#proseModal1">Read Full Piece</button>
+            </div>
+        </article>
+
+        <!-- Story Card 2 -->
+        <article class="card bg-walnut border-parchment p-4 p-md-5 shadow-lg mb-5">
+            <div class="d-flex justify-content-between align-items-baseline mb-2">
+                <h2 class="h3 text-capitalize fw-normal text-parchment m-0">Letters to an Empty Room</h2>
+                <span class="badge border border-parchment text-parchment-muted fw-normal rounded-pill px-3 py-2">8 Min Read</span>
+            </div>
+            <p class="text-parchment-muted small font-monospace mb-4">Short Fiction • Winter</p>
+            <p class="fs-5 lh-lg text-parchment mb-4">
+                He left the letters on the desk, precisely where they had been written. Twelve envelopes, unsealed, addressed to a ghost who hadn't walked through that door in a decade. The ink was still fresh enough to smudge, a testament to a conversation that would never happen...
+            </p>
+            <div>
+                <button class="btn btn-sepia-outline px-4 text-capitalize fw-light" data-bs-toggle="modal" data-bs-target="#proseModal2">Read Full Piece</button>
+            </div>
+        </article>
+
+    </main>
+
+    <!-- ==================== PROSE MODALS SECTION ==================== -->
+
+    <!-- Modal 1: The Architecture of Silence -->
+    <div class="modal fade" id="proseModal1" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable modal-lg">
+            <div class="modal-content p-2 p-md-4">
+                <div class="modal-header border-bottom border-parchment pb-3 mb-3">
+                    <h3 class="modal-title h3 text-parchment">The Architecture of Silence</h3>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" style="filter: invert(1);"></button>
+                </div>
+                <div class="modal-body fs-5 lh-lg text-parchment">
+                    <p>Silence is rarely empty. If you sit still long enough in an old house, you begin to realize that the absence of noise is actually a heavy, physical thing. It presses against the windowpanes alongside the rain, demanding to be acknowledged.</p>
+                    <p>We spend our lives running from it. We fill our rooms with the hum of radios, the artificial glow of screens, the constant chatter of meaningless conversations—all to avoid facing the architecture of our own minds.</p>
+                    <p>But when the power goes out, or when the rest of the world finally falls asleep, the silence remains. It is the ultimate truth-teller. It does not allow you to hide behind excuses or distractions. It forces you to sit at your desk, pick up a pen, and confront the thousands of thoughts you've been avoiding all day.</p>
+                    <p>Perhaps that is why I write. Not to break the silence, but to finally translate what it has been trying to tell me all along.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 2: Letters to an Empty Room -->
+    <div class="modal fade" id="proseModal2" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable modal-lg">
+            <div class="modal-content p-2 p-md-4">
+                <div class="modal-header border-bottom border-parchment pb-3 mb-3">
+                    <h3 class="modal-title h3 text-parchment">Letters to an Empty Room</h3>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" style="filter: invert(1);"></button>
+                </div>
+                <div class="modal-body fs-5 lh-lg text-parchment">
+                    <p>He left the letters on the desk, precisely where they had been written. Twelve envelopes, unsealed, addressed to a ghost who hadn't walked through that door in a decade. The ink was still fresh enough to smudge, a testament to a conversation that would never happen.</p>
+                    <p>Writing them was a ritual. Every year, when the frost first touched the window, he would pull out the heavy parchment paper and uncap the silver fountain pen. The scratching of the nib was the only sound in the study.</p>
+                    <p>Some letters were angry. Others were apologies wrapped in metaphor. But this final letter, the twelfth one, was simply an acknowledgment of time. He wrote about the dust gathering on the bookshelves, the way the floorboards creaked differently now, and how the memory of her was no longer a sharp pain, but a dull, permanent ache.</p>
+                    <p>He set the pen down. For the first time in ten years, he sealed the envelopes. He didn't mail them—there was no address to send them to. Instead, he locked them in the bottom drawer, turned off the brass lamp, and finally walked out of the room.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
