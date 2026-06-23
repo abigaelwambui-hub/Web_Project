@@ -4,20 +4,53 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Author | Ink & Solitude</title>
+    <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
-        body { background-color: #2b1e16; color: #f4eae1; font-family: 'Georgia', serif; }
-        .bg-walnut { background-color: #3d2b1f !important; }
-        .text-parchment { color: #f4eae1 !important; }
-        .border-parchment { border-color: #5c4331 !important; }
-        .btn-sepia { border-color: #c9af96; color: #c9af96; }
-        .text-parchment-muted {color: #c9af96 !important; opacity: 0.8;}
-      
+        body { 
+            background-color: #2b1e16; 
+            color: #f4eae1; 
+            font-family: 'Georgia', serif; 
+        }
+        .bg-walnut { 
+            background-color: #3d2b1f !important; 
+        }
+        .text-parchment { 
+            color: #f4eae1 !important; 
+        }
+        .text-parchment-muted { 
+            color: #c9af96 !important; 
+            opacity: 0.9; 
+        }
+        .border-parchment { 
+            border-color: #5c4331 !important; 
+        }
+        .btn-sepia-outline { 
+            border-color: #c9af96; 
+            color: #c9af96; 
+            transition: all 0.3s ease;
+        }
+        .btn-sepia-outline:hover { 
+            background-color: #c9af96; 
+            color: #2b1e16; 
+        }
+        .accent-bar {
+            width: 50px;
+            height: 2px;
+            background-color: #c9af96;
+            margin: 1.5rem auto;
+        }
+        .book-counter {
+            font-size: 3rem;
+            font-weight: 300;
+            color: #c9af96;
+            line-height: 1;
+        }
     </style>
 </head>
 <body>
 
-    <!-- Global Navbar -->
+    <!-- Global Navigation Bar -->
     <nav class="navbar navbar-expand-xl bg-walnut border-bottom border-parchment py-3">
         <div class="container-fluid">
             <a class="navbar-brand text-parchment fw-bold" href="index.html">✒️ Ink & Solitude</a>
@@ -32,7 +65,7 @@
                     <li class="nav-item"><a class="nav-link text-parchment-muted mx-2" href="writing.html">Prose & Essays</a></li>
                     <li class="nav-item"><a class="nav-link text-parchment-muted mx-2" href="quotes.html">Quotes Wall</a></li>
                     <li class="nav-item"><a class="nav-link text-parchment-muted mx-2" href="inspiration.html">Inspiration</a></li>
-                    <li class="nav-item"><a class="nav-link text-parchment-muted mx-2" href="about.html">The Author</a></li>
+                    <li class="nav-item"><a class="nav-link text-parchment active fw-bold mx-2" href="about.html">The Author</a></li>
                     <li class="nav-item"><a class="nav-link text-parchment-muted mx-2" href="contact.html">Subscriptions</a></li>
                     <li class="nav-item"><a class="nav-link text-parchment-muted mx-2" href="guestbook.html">Guestbook</a></li>
                 </ul>
@@ -40,21 +73,86 @@
         </div>
     </nav>
 
-    <!-- Biography Layout -->
-    <main class="container my-5 py-5">
-        <div class="row align-items-center g-5">
-            <!-- Left Side: Picture of You -->
-            <div class="col-md-5 text-center">
-                <img src="images/me.jpg" class="img-fluid rounded shadow-lg border border-parchment p-2 bg-walnut" alt="Portrait of the Author">
+    <!-- Main Content Container -->
+    <main class="container my-5 py-4">
+        <div class="row g-5 align-items-center justify-content-center">
+            
+            <!-- Left Column: Visual Emblem & Stats Card -->
+            <div class="col-lg-4 text-center">
+                <div class="card bg-walnut border-parchment p-4 p-md-5 shadow-lg h-100">
+                    
+                    <!-- Custom SVG Illustration of Stacked Journals (The 11 Books) -->
+                    <svg class="mx-auto mb-4" width="160" height="160" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <!-- Book Stack Base -->
+                        <path d="M15 75 L85 75 L80 85 L20 85 Z" fill="#2b1e16" stroke="#c9af96" stroke-width="1.5" />
+                        <path d="M18 62 L82 62 L78 72 L22 72 Z" fill="#2b1e16" stroke="#c9af96" stroke-width="1.5" />
+                        <path d="M22 49 L78 49 L74 59 L26 59 Z" fill="#2b1e16" stroke="#c9af96" stroke-width="1.5" />
+                        
+                        <!-- Top Open Journal -->
+                        <path d="M25 35 Q50 42 75 35 L75 42 Q50 49 25 42 Z" fill="#3d2b1f" stroke="#c9af96" stroke-width="1.5" />
+                        
+                        <!-- Inkwell and Quill -->
+                        <rect x="35" y="15" width="14" height="14" rx="2" fill="#2b1e16" stroke="#c9af96" stroke-width="1.5" />
+                        <line x1="45" y1="20" x2="68" y2="2" stroke="#c9af96" stroke-width="1.5" stroke-linecap="round" />
+                        <!-- Decorative feather lines on quill -->
+                        <line x1="58" y1="10" x2="62" y2="7" stroke="#c9af96" stroke-width="1" />
+                        <line x1="54" y1="13" x2="58" y2="10" stroke="#c9af96" stroke-width="1" />
+                        <line x1="50" y1="16" x2="54" y2="13" stroke="#c9af96" stroke-width="1" />
+                    </svg>
+
+                    <h2 class="h5 text-parchment text-uppercase tracking-wide mb-1">A. Wambui</h2>
+                    <p class="text-parchment-muted small italic">Architect of Words</p>
+                    <div class="accent-bar"></div>
+                    
+                    <div class="row mt-4">
+                        <div class="col-6 border-end border-parchment">
+                            <span class="book-counter d-block">11+</span>
+                            <span class="text-parchment-muted small text-uppercase font-monospace d-block mt-2">Journals Filled</span>
+                        </div>
+                        <div class="col-6">
+                            <span class="book-counter d-block">∞</span>
+                            <span class="text-parchment-muted small text-uppercase font-monospace d-block mt-2">Thoughts Released</span>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <!-- Right Side: Text Narrative -->
-            <div class="col-md-7">
-                <h1 class="display-5 mb-4 font-monospace text-capitalize fw-normal">Behind the Ink</h1>
-                <p class="fs-5 leading-relaxed">Welcome. I am a collector of fleeting feelings and rainy thoughts. My writing balances on the fine line separating old English romanticism from modern vulnerabilities.</p>
-                <p class="text-muted">I gather inspiration from worn-out margins of antique novels, the rhythm of persistent rain against glass pane, and the raw texture of classical letters. This space holds everything my heart could not carry quietly.</p>
+
+            <!-- Right Column: The Author's Personal Philosophy -->
+            <div class="col-lg-7">
+                <div class="card bg-walnut border-parchment p-4 p-md-5 shadow-lg">
+                    <h1 class="display-6 fw-normal text-parchment mb-4">Behind the Wall</h1>
+                    
+                    <p class="fs-5 lh-lg text-parchment mb-4">
+                        The world operates under a harsh modern rule: be strong, show no emotions, and treat feeling deeply as a dangerous vulnerability. But vulnerability is not a flaw—it is where our truth lives.
+                    </p>
+                    
+                    <p class="fs-5 lh-lg text-parchment mb-4">
+                        When I need a sanctuary to drop my armor and just be vulnerable, I go to my books. I have hand-written over <strong>eleven personal journals</strong>, each page heavy with ink and loaded with precisely how I felt at the exact moment the words touched the paper. 
+                    </p>
+
+                    <p class="text-parchment-muted italic ps-3 border-start border-parchment my-4 fs-5 py-1">
+                        "These journals allow me to relive chapters of my life just as vividly as the day they occurred. They prove that I was at the absolute pinnacle of my emotions."
+                    </p>
+
+                    <p class="fs-5 lh-lg text-parchment mb-4">
+                        My words act as an anchor. They don't let me forget; they remind me that I am complex, no matter how simple or flat the outside world tries to define me. Every written line displays a different side of myself when faced with different moments in time, showing a permanent map of my evolution and growth.
+                    </p>
+
+                    <p class="fs-5 lh-lg text-parchment mb-5">
+                        I choose to share what I write because, although I may seem like an unyielding stone wall on the outside, I want to show you the backend of my internal world. There are thousands of thoughts running through my mind simultaneously that must escape somehow. By letting mine out, I hope to show you that you can release yours too.
+                    </p>
+
+                    <div class="d-flex flex-column flex-sm-row gap-3">
+                        <a href="inspiration.html" class="btn btn-sepia-outline px-4 py-2 text-capitalize fw-light">Explore the Inspiration</a>
+                        <a href="contact.html" class="btn btn-sepia-outline px-4 py-2 text-capitalize fw-light">Leave a Private Note</a>
+                    </div>
+                </div>
             </div>
+
         </div>
     </main>
 
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
