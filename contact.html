@@ -4,28 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inquiries & Subscriptions | Ink & Solitude</title>
+    <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body { background-color: #2b1e16; color: #f4eae1; font-family: 'Georgia', serif; }
         .bg-walnut { background-color: #3d2b1f !important; }
         .text-parchment { color: #f4eae1 !important; }
+        .text-parchment-muted { color: #c9af96 !important; } /* High-contrast sepia tone for readability */
         .border-parchment { border-color: #5c4331 !important; }
+        
+        /* Inputs & Form Fields styling */
         .form-control, .form-check-input { background-color: #2b1e16 !important; border-color: #5c4331 !important; color: #f4eae1 !important; }
-        .form-control::placeholder { color: #8c7361 !important; }
+        .form-control:focus { border-color: #c9af96 !important; box-shadow: 0 0 0 0.25rem rgba(201, 175, 150, 0.25) !important; }
+        .form-control::placeholder { color: #a88d75 !important; } /* Higher contrast placeholder text */
+        
+        /* Custom buttons */
         .btn-sepia-outline { border-color: #c9af96; color: #c9af96; }
         .btn-sepia-outline:hover { background-color: #c9af96; color: #2b1e16; }
-        .text-parchment-muted {color: #c9af96 !important; opacity: 0.8;}
     </style>
 </head>
 <body>
 
-    <!-- Global Navbar -->
+    <!-- Global Navbar (Fully Corrected Contrast) -->
     <nav class="navbar navbar-expand-xl bg-walnut border-bottom border-parchment py-3">
         <div class="container-fluid">
             <a class="navbar-brand text-parchment fw-bold" href="index.html">✒️ Ink & Solitude</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" style="border-color: #c9af96;">
-                <span class="navbar-toggler-icon" style="filter: invert(1);"></span>
-            </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto text-uppercase fs-7 small">
                     <li class="nav-item"><a class="nav-link text-parchment-muted mx-2" href="index.html">Home</a></li>
@@ -35,7 +38,7 @@
                     <li class="nav-item"><a class="nav-link text-parchment-muted mx-2" href="quotes.html">Quotes Wall</a></li>
                     <li class="nav-item"><a class="nav-link text-parchment-muted mx-2" href="inspiration.html">Inspiration</a></li>
                     <li class="nav-item"><a class="nav-link text-parchment-muted mx-2" href="about.html">The Author</a></li>
-                    <li class="nav-item"><a class="nav-link text-parchment-muted mx-2" href="contact.html">Subscriptions</a></li>
+                    <li class="nav-item"><a class="nav-link text-parchment active fw-bold mx-2" href="contact.html">Subscriptions</a></li>
                     <li class="nav-item"><a class="nav-link text-parchment-muted mx-2" href="guestbook.html">Guestbook</a></li>
                 </ul>
             </div>
@@ -45,8 +48,8 @@
     <!-- Combined Form Container -->
     <main class="container my-5 py-4" style="max-width: 650px;">
         <div class="card bg-walnut border-parchment p-4 p-md-5 shadow-lg">
-            <h2 class="h3 mb-2 text-center text-capitalize fw-normal">Join the Mailing Desk</h2>
-            <p class="text-muted small text-center mb-5">Subscribe to receive raw verses in your inbox, or leave a private editorial inquiry.</p>
+            <h2 class="h3 mb-2 text-center text-capitalize fw-normal text-parchment">Join the Mailing Desk</h2>
+            <p class="text-parchment-muted small text-center mb-5">Subscribe to receive raw verses in your inbox, or leave a private editorial inquiry.</p>
 
             <form>
                 <!-- Name input -->
@@ -63,18 +66,18 @@
 
                 <!-- Poetry Genre Selectors -->
                 <div class="mb-4">
-                    <label class="form-label text-parchment small text-uppercase d-block">Preferred Genres</label>
+                    <label class="form-label text-parchment small text-uppercase d-block mb-2">Preferred Genres</label>
                     <div class="form-check form-check-inline mt-1">
                         <input class="form-check-input" type="checkbox" id="genre1" value="melancholy">
-                        <label class="form-check-label text-muted small" for="genre1">Melancholy & Rain</label>
+                        <label class="form-check-label text-parchment-muted small" for="genre1">Melancholy & Rain</label>
                     </div>
                     <div class="form-check form-check-inline">
                         <input class="form-check-input" type="checkbox" id="genre2" value="classical">
-                        <label class="form-check-label text-muted small" for="genre2">Old English Romantics</label>
+                        <label class="form-check-label text-parchment-muted small" for="genre2">Old English Romantics</label>
                     </div>
                     <div class="form-check form-check-inline">
                         <input class="form-check-input" type="checkbox" id="genre3" value="prose">
-                        <label class="form-check-label text-muted small" for="genre3">Micro-Quotes</label>
+                        <label class="form-check-label text-parchment-muted small" for="genre3">Micro-Quotes</label>
                     </div>
                 </div>
 
