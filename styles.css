@@ -101,3 +101,25 @@ body {
 .accordion-button::after {
     filter: invert(1) sepia(100%) saturate(100%);
 }
+
+/* ==========================================
+   6. GLOBAL FOOTER STYLING
+   ========================================== */
+.footer-img {
+    height: 120px;
+    width: 120px;
+    object-fit: cover;
+    border: 2px solid #5c4331;
+    padding: 4px;
+    background-color: #2b1e16;
+}
+
+.footer-link {
+    color: #c9af96 !important;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.footer-link:hover {
+    color: #f4eae1 !important;
+}
