@@ -67,6 +67,23 @@
             </footer>
         </article>
 
+        <section class="container my-5 col-md-8">
+            <div class="accordion border border-parchment rounded shadow-sm shadow" id="commentaryAccordion">
+                <div class="accordion-item bg-walnut border-0">
+                    <h3 class="accordion-header">
+                        <button class="accordion-button bg-walnut text-parchment font-monospace small shadow-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseNotes">
+                            🖋️ AUTHOR'S FIELD NOTES (CLICK TO EXPAND)
+                        </button>
+                    </h3>
+                    <div id="collapseNotes" class="accordion-collapse collapse" data-bs-parent="#commentaryAccordion">
+                        <div class="accordion-body text-parchment-muted small lh-lg italic p-4 border-top border-parchment">
+                            This week's piece was written during a heavy downpour on the evening of June 24. The rhythmic static of rain hitting the glass pane directly inspired the line structure. I wanted to capture the contrast between the rigid structure of stone walls and the fluid, chaotic nature of ink running wild on damp paper.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- Interactive Comments Engine -->
         <section class="card bg-walnut border-parchment p-4 p-md-5 shadow-lg">
             <h3 class="h4 mb-4 text-capitalize fw-normal">Reader Reflections</h3>
@@ -95,8 +112,9 @@
 
     </main>
 
-    <!-- Place this right before </body> -->
-    <script src="script.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
+    <script src="script.js"></script>
 </body>
+
 </html>
