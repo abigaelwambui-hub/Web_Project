@@ -51,47 +51,32 @@
             <h2 class="h3 mb-2 text-center text-capitalize fw-normal text-parchment">Join the Mailing Desk</h2>
             <p class="text-parchment-muted small text-center mb-5">Subscribe to receive raw verses in your inbox, or leave a private editorial inquiry.</p>
 
-            <form>
-                <!-- Name input -->
-                <div class="mb-4">
-                    <label for="userName" class="form-label text-parchment small text-uppercase">Name</label>
-                    <input type="text" class="form-control" id="userName" placeholder="Enter your full name" required>
-                </div>
+            <section class="container my-5 py-5">
+                <div class="row justify-content-center">
+                    <div class="col-md-6 bg-walnut p-4 rounded border border-parchment shadow">
+                        <h2 class="h4 mb-3 text-center fw-normal">Subscribe to the Solitude Letters</h2>
+                        <p class="text-parchment-muted small text-center mb-4">Receive weekly poems, fragmented thoughts, and monthly essays directly in your inbox.</p>
+                        
+                        <form id="subscriptionForm" novalidate>
+                            <div class="mb-3">
+                                <label for="subName" class="form-label text-parchment-muted small font-monospace">Your Name</label>
+                                <input type="text" class="form-control bg-transparent text-parchment border-parchment" id="subName" placeholder="e.g., Arthur Pendelton">
+                                <div class="invalid-feedback text-danger small">Name must be at least 2 characters long.</div>
+                            </div>
 
-                <!-- Email Input -->
-                <div class="mb-4">
-                    <label for="userEmail" class="form-label text-parchment small text-uppercase">Email Address</label>
-                    <input type="email" class="form-control" id="userEmail" placeholder="yourname@domain.com" required>
-                </div>
+                            <div class="mb-3">
+                                <label for="subEmail" class="form-label text-parchment-muted small font-monospace">Email Address</label>
+                                <input type="email" class="form-control bg-transparent text-parchment border-parchment" id="subEmail" placeholder="name@example.com">
+                                <div class="invalid-feedback text-danger small">Please provide a valid email address.</div>
+                            </div>
 
-                <!-- Poetry Genre Selectors -->
-                <div class="mb-4">
-                    <label class="form-label text-parchment small text-uppercase d-block mb-2">Preferred Genres</label>
-                    <div class="form-check form-check-inline mt-1">
-                        <input class="form-check-input" type="checkbox" id="genre1" value="melancholy">
-                        <label class="form-check-label text-parchment-muted small" for="genre1">Melancholy & Rain</label>
-                    </div>
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="checkbox" id="genre2" value="classical">
-                        <label class="form-check-label text-parchment-muted small" for="genre2">Old English Romantics</label>
-                    </div>
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="checkbox" id="genre3" value="prose">
-                        <label class="form-check-label text-parchment-muted small" for="genre3">Micro-Quotes</label>
+                            <button type="submit" class="btn btn-sepia w-100 mt-2 text-uppercase tracking-wide btn-sm">Join the Registry</button>
+                        </form>
+
+                        <div id="formFeedback" class="alert mt-3 text-center d-none"></div>
                     </div>
                 </div>
-
-                <!-- Custom Request Textbox -->
-                <div class="mb-5">
-                    <label for="userMessage" class="form-label text-parchment small text-uppercase">Custom Letters / Inquiries</label>
-                    <textarea class="form-control" id="userMessage" rows="4" placeholder="Write your letter here..."></textarea>
-                </div>
-
-                <!-- Send Button -->
-                <div class="d-grid gap-2">
-                    <button class="btn btn-sepia-outline text-capitalize fw-light py-2" type="submit">Send Inquiry</button>
-                </div>
-            </form>
+            </section>
         </div>
     </main>
 
