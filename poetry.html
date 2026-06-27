@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Poetry Archive | Ink & Solitude</title>
-    <!-- Bootstrap 5 CSS -->
+    <title>The Writer's Desk | Poetry Archives</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body { background-color: #2b1e16; color: #f4eae1; font-family: 'Georgia', serif; }
@@ -12,26 +11,35 @@
         .text-parchment { color: #f4eae1 !important; }
         .text-parchment-muted { color: #c9af96 !important; opacity: 0.8; }
         .border-parchment { border-color: #5c4331 !important; }
-        .btn-sepia-outline { border-color: #c9af96; color: #c9af96; }
-        .btn-sepia-outline:hover { background-color: #c9af96; color: #2b1e16; }
-        .archive-item { border-bottom: 1px dashed #5c4331; }
-        .archive-item:last-child { border-bottom: none; }
+        .btn-sepia { border-color: #c9af96; color: #c9af96; background: transparent; }
+        .btn-sepia:hover, .btn-sepia.active { background-color: #c9af96; color: #2b1e16; }
         
-        /* Modal Custom Sepia Styling */
-        .modal-content { background-color: #3d2b1f; border: 1px solid #5c4331; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
+        /* Modal Textbook Styling */
+        .modal-content-parchment {
+            background-color: #3d2b1f;
+            border: 1px solid #c9af96;
+            color: #f4eae1;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+        .poem-line {
+            line-height: 2.2;
+            letter-spacing: 0.05rem;
+        }
     </style>
 </head>
 <body>
 
-    <!-- Global Navbar -->
     <nav class="navbar navbar-expand-xl bg-walnut border-bottom border-parchment py-3">
         <div class="container-fluid">
             <a class="navbar-brand text-parchment fw-bold" href="index.html">✒️ Ink & Solitude</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon" style="filter: invert(1);"></span>
+            </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto text-uppercase fs-7 small">
                     <li class="nav-item"><a class="nav-link text-parchment-muted mx-2" href="index.html">Home</a></li>
                     <li class="nav-item"><a class="nav-link text-parchment-muted mx-2" href="weekly.html">Weekly Poem</a></li>
-                    <li class="nav-item"><a class="nav-link text-parchment active fw-bold" href="poetry.html">Poetry Archive</a></li>
+                    <li class="nav-item"><a class="nav-link text-parchment active fw-bold mx-2" href="poetry.html">Poetry Archive</a></li>
                     <li class="nav-item"><a class="nav-link text-parchment-muted mx-2" href="writing.html">Prose & Essays</a></li>
                     <li class="nav-item"><a class="nav-link text-parchment-muted mx-2" href="quotes.html">Quotes Wall</a></li>
                     <li class="nav-item"><a class="nav-link text-parchment-muted mx-2" href="inspiration.html">Inspiration</a></li>
@@ -43,138 +51,127 @@
         </div>
     </nav>
 
-    <!-- Header Section -->
-    <header class="container text-center py-5 my-3">
-        <h1 class="display-5 fw-normal text-capitalize">The Poetry Library</h1>
-        <p class="lead text-parchment-muted fs-6">An archival history of past verses, quiet stanzas, and old ink.</p>
-    </header>
+    <main class="container my-5">
+        
+        <div class="row mb-5 justify-content-center">
+            <div class="col-md-8 text-center">
+                <h1 class="display-5 mb-3 fw-light italic">The Poetry Archives</h1>
+                <p class="text-parchment-muted small mb-4">Filter through dynamic verses by category or keyword search strings.</p>
+                
+                <input type="text" id="poetrySearch" class="form-control bg-walnut text-parchment border-parchment text-center py-2 mb-4 shadow-sm" placeholder="Type a keyword, title, or line fragment...">
+                
+                <div class="d-flex flex-wrap justify-content-center gap-2">
+                    <button class="btn btn-sm btn-sepia category-filter active fw-bold" data-target="all">All Verses</button>
+                    <button class="btn btn-sm btn-sepia category-filter" data-target="shadows">Shadows & Rain</button>
+                    <button class="btn btn-sm btn-sepia category-filter" data-target="silence">Architectures of Silence</button>
+                    <button class="btn btn-sm btn-sepia category-filter" data-target="fragments">Fragmented Truths</button>
+                </div>
+            </div>
+        </div>
 
-    <!-- Poetry Archive Grid -->
-    <main class="container my-4" style="max-width: 850px;">
-        <div class="card bg-walnut border-parchment p-4 p-md-5 shadow-lg mb-5">
+        <div class="row g-4">
             
-            <!-- Poem Item 1 -->
-            <div class="py-4 archive-item">
-                <div class="d-md-flex justify-content-between align-items-baseline mb-3">
-                    <h2 class="h4 text-capitalize fw-normal text-parchment mb-1">Midnight in Manchester</h2>
-                    <span class="text-parchment-muted small font-monospace">May 2026</span>
+            <div class="col-md-4 poetry-card" data-category="shadows">
+                <div class="card bg-walnut text-parchment border-parchment h-100 p-4 shadow-sm">
+                    <div class="card-body p-0 d-flex flex-column justify-content-between">
+                        <div>
+                            <span class="text-parchment-muted font-monospace small d-block mb-2">#01 — Rain Patterns</span>
+                            <h3 class="h5 poem-title fw-normal mb-3">Old English Rain</h3>
+                            <p class="poem-snippet text-parchment-muted small italic lh-lg">"The sky collapses in clean, gray sheets, drowning out the static of the town. Ink smears across the parchment like dynamic shadows..."</p>
+                        </div>
+                        <button class="btn btn-link text-parchment p-0 mt-4 text-start font-monospace small text-decoration-none" data-bs-toggle="modal" data-bs-target="#poemModal1">Read Full Stanza →</button>
+                    </div>
                 </div>
-                <p class="text-parchment-muted italic mb-3">
-                    "The pavement shines beneath the yellow light,<br>
-                    A lonely traveler whispering to the night..."
-                </p>
-                <button class="btn btn-sm btn-sepia-outline px-3 text-capitalize fw-light" data-bs-toggle="modal" data-bs-target="#poemModal1">Read Full Verse</button>
             </div>
 
-            <!-- Poem Item 2 -->
-            <div class="py-4 archive-item">
-                <div class="d-md-flex justify-content-between align-items-baseline mb-3">
-                    <h2 class="h4 text-capitalize fw-normal text-parchment mb-1">The Paper Weights</h2>
-                    <span class="text-parchment-muted small font-monospace">April 2026</span>
+            <div class="col-md-4 poetry-card" data-category="silence">
+                <div class="card bg-walnut text-parchment border-parchment h-100 p-4 shadow-sm">
+                    <div class="card-body p-0 d-flex flex-column justify-content-between">
+                        <div>
+                            <span class="text-parchment-muted font-monospace small d-block mb-2">#02 — Structural Space</span>
+                            <h3 class="h5 poem-title fw-normal mb-3">Architecture of Silence</h3>
+                            <p class="poem-snippet text-parchment-muted small italic lh-lg">"There are rooms built entirely out of things left unsaid. The pillars are dust motes dancing in pale morning illumination..."</p>
+                        </div>
+                        <button class="btn btn-link text-parchment p-0 mt-4 text-start font-monospace small text-decoration-none" data-bs-toggle="modal" data-bs-target="#poemModal2">Read Full Stanza →</button>
+                    </div>
                 </div>
-                <p class="text-parchment-muted italic mb-3">
-                    "Hold down the sheets before the gale begins,<br>
-                    To hide the records of our quiet sins..."
-                </p>
-                <button class="btn btn-sm btn-sepia-outline px-3 text-capitalize fw-light" data-bs-toggle="modal" data-bs-target="#poemModal2">Read Full Verse</button>
             </div>
 
-            <!-- Poem Item 3 -->
-            <div class="py-4 archive-item">
-                <div class="d-md-flex justify-content-between align-items-baseline mb-3">
-                    <h2 class="h4 text-capitalize fw-normal text-parchment mb-1">Echoes of a Quill</h2>
-                    <span class="text-parchment-muted small font-monospace">March 2026</span>
+            <div class="col-md-4 poetry-card" data-category="fragments">
+                <div class="card bg-walnut text-parchment border-parchment h-100 p-4 shadow-sm">
+                    <div class="card-body p-0 d-flex flex-column justify-content-between">
+                        <div>
+                            <span class="text-parchment-muted font-monospace small d-block mb-2">#03 — Discarded Pages</span>
+                            <h3 class="h5 poem-title fw-normal mb-3">Fragmented Truths</h3>
+                            <p class="poem-snippet text-parchment-muted small italic lh-lg">"We piece together realities from torn journals and loose margins. A syllable found in the dark can rebuild an empire..."</p>
+                        </div>
+                        <button class="btn btn-link text-parchment p-0 mt-4 text-start font-monospace small text-decoration-none" data-bs-toggle="modal" data-bs-target="#poemModal3">Read Full Stanza →</button>
+                    </div>
                 </div>
-                <p class="text-parchment-muted italic mb-3">
-                    "A scratch upon the surface, sharp and deep,<br>
-                    A promise that the shadow swore to keep..."
-                </p>
-                <button class="btn btn-sm btn-sepia-outline px-3 text-capitalize fw-light" data-bs-toggle="modal" data-bs-target="#poemModal3">Read Full Verse</button>
             </div>
 
         </div>
     </main>
 
-    <!-- ==================== POEM MODALS SECTION ==================== -->
-
-    <!-- Modal 1: Midnight in Manchester -->
     <div class="modal fade" id="poemModal1" tabindex="-1" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content p-4">
-                <div class="modal-header border-0 d-flex justify-content-between align-items-baseline">
-                    <h3 class="modal-title h4 text-parchment italic">Midnight in Manchester</h3>
+            <div class="modal-content modal-content-parchment p-4">
+                <div class="modal-header border-0 p-0 justify-content-between align-items-center mb-4">
+                    <h2 class="h4 italic m-0">Old English Rain</h2>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" style="filter: invert(1);"></button>
                 </div>
-                <div class="modal-body text-center py-4 fs-5 lh-lg font-monospace text-parchment">
-                    The pavement shines beneath the yellow light,<br>
-                    A lonely traveler whispering to the night.<br>
-                    The cobblestones are wet with silver rain,<br>
-                    And echoes carry down the narrow lane.<br><br>
-                    A silhouette against the foggy glass,<br>
-                    Watches the heavy, silent hours pass.<br>
-                    No words are spoken, yet the air is deep,<br>
-                    With promises the midnight swore to keep.
-                </div>
-                <div class="modal-footer border-0 justify-content-center text-parchment-muted small font-monospace">
-                    — Written May 2026 —
+                <div class="modal-body p-0 text-center text-parchment-muted poem-line">
+                    The sky collapses in clean, gray sheets,<br>
+                    drowning out the static of the town.<br>
+                    Ink smears across the parchment like dynamic shadows,<br>
+                    tracing lines that no map can hold.<br>
+                    We watch from deep within the old stone walls,<br>
+                    where ancient drafts whisper secrets through the floorboards,<br>
+                    and write down verses to make the midnight last.
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Modal 2: The Paper Weights -->
     <div class="modal fade" id="poemModal2" tabindex="-1" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content p-4">
-                <div class="modal-header border-0 d-flex justify-content-between align-items-baseline">
-                    <h3 class="modal-title h4 text-parchment italic">The Paper Weights</h3>
+            <div class="modal-content modal-content-parchment p-4">
+                <div class="modal-header border-0 p-0 justify-content-between align-items-center mb-4">
+                    <h2 class="h4 italic m-0">Architecture of Silence</h2>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" style="filter: invert(1);"></button>
                 </div>
-                <div class="modal-body text-center py-4 fs-5 lh-lg font-monospace text-parchment">
-                    Hold down the sheets before the gale begins,<br>
-                    To hide the records of our quiet sins.<br>
-                    Heavy brass resting on an ancient text,<br>
-                    Protecting what we wrote, and what comes next.<br><br>
-                    For thoughts will fly like leaves upon the breeze,<br>
-                    And lose themselves among the frozen trees,<br>
-                    Unless an anchor binds them to the floor,<br>
-                    Safe behind a locked and heavy study door.
-                </div>
-                <div class="modal-footer border-0 justify-content-center text-parchment-muted small font-monospace">
-                    — Written April 2026 —
+                <div class="modal-body p-0 text-center text-parchment-muted poem-line">
+                    There are rooms built entirely out of things left unsaid.<br>
+                    The pillars are dust motes dancing in pale morning illumination,<br>
+                    and the heavy ceiling is supported by a single collective breath.<br>
+                    Step softly across the uncarved flagstones,<br>
+                    for even a heartbeat here sounds like a hammer striking iron,<br>
+                    and the truth is only ever told in the spaces between lines.
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Modal 3: Echoes of a Quill -->
     <div class="modal fade" id="poemModal3" tabindex="-1" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content p-4">
-                <div class="modal-header border-0 d-flex justify-content-between align-items-baseline">
-                    <h3 class="modal-title h4 text-parchment italic">Echoes of a Quill</h3>
+            <div class="modal-content modal-content-parchment p-4">
+                <div class="modal-header border-0 p-0 justify-content-between align-items-center mb-4">
+                    <h2 class="h4 italic m-0">Fragmented Truths</h2>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" style="filter: invert(1);"></button>
                 </div>
-                <div class="modal-body text-center py-4 fs-5 lh-lg font-monospace text-parchment">
-                    A scratch upon the surface, sharp and deep,<br>
-                    A promise that the shadow swore to keep.<br>
-                    The feather bends but does not dare to break,<br>
-                    Recording every calculation that we make.<br><br>
-                    The iron gall dries to a permanent rust,<br>
-                    Long after our own hands have turned to dust.<br>
-                    The writing stays, a static living sound,<br>
-                    Buried beneath the silence we have found.
-                </div>
-                <div class="modal-footer border-0 justify-content-center text-parchment-muted small font-monospace">
-                    — Written March 2026 —
+                <div class="modal-body p-0 text-center text-parchment-muted poem-line">
+                    We piece together realities from torn journals and loose margins.<br>
+                    A syllable found in the dark can rebuild an entire forgotten empire,<br>
+                    while grand declarations turn to ash in the sun.<br>
+                    Trust only the fragments that survive the fire,<br>
+                    the torn corners where signatures used to rest,<br>
+                    and the ink that bled deep enough to score the wood below.
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Bootstrap JS Bundle -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Place this right before </body> -->
     <script src="script.js"></script>
 </body>
 </html>
