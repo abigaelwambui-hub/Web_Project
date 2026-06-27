@@ -48,74 +48,36 @@
         <p class="lead text-parchment-muted fs-6">A permanent record for wandering readers to leave their trace behind.</p>
     </header>
 
-    <!-- Guestbook Layout -->
-    <main class="container my-4 mb-5" style="max-width: 1000px;">
+    <main class="container my-5">
         <div class="row g-5">
-            
-            <!-- Left Column: Sign the Ledger Form -->
-            <div class="col-lg-5">
-                <div class="card bg-walnut border-parchment p-4 shadow-lg sticky-top" style="top: 2rem;">
-                    <h2 class="h4 mb-4 text-capitalize fw-normal text-parchment text-center">Leave a Trace</h2>
+            <div class="col-md-5">
+                <div class="bg-walnut p-4 rounded border border-parchment shadow-sm">
+                    <h2 class="h4 mb-3 fw-normal">Sign the Ledger</h2>
+                    <p class="text-parchment-muted small mb-4">Leave a fragment of your thoughts, an impression, or a simple mark to show you passed through this quiet space.</p>
                     
-                    <form>
+                    <form id="guestbookForm">
                         <div class="mb-3">
-                            <label for="guestName" class="form-label text-parchment small text-uppercase">Your Name or Initial</label>
-                            <input type="text" class="form-control" id="guestName" placeholder="e.g., A Wandering Reader" required>
+                            <label for="guestName" class="form-label text-parchment-muted small font-monospace">Pen Name / Initials</label>
+                            <input type="text" class="form-control bg-transparent text-parchment border-parchment" id="guestName" placeholder="e.g., A Wandering Soul" required>
                         </div>
-
-                        <div class="mb-4">
-                            <label for="guestMessage" class="form-label text-parchment small text-uppercase">Your Reflection</label>
-                            <textarea class="form-control" id="guestMessage" rows="5" placeholder="What thoughts did these pages awaken in you?" required></textarea>
+                        <div class="mb-3">
+                            <label for="guestMessage" class="form-label text-parchment-muted small font-monospace">Your Reflection</label>
+                            <textarea class="form-control bg-transparent text-parchment border-parchment" id="guestMessage" rows="4" placeholder="Type your message here..." required></textarea>
                         </div>
-
-                        <div class="d-grid">
-                            <button class="btn btn-sepia-outline text-capitalize fw-light py-2" type="submit">Sign the Ledger</button>
-                        </div>
+                        <button type="submit" class="btn btn-sepia w-100 text-uppercase tracking-wide btn-sm">Leave Your Mark</button>
                     </form>
                 </div>
             </div>
 
-            <!-- Right Column: Previous Entries -->
-            <div class="col-lg-7">
-                <div class="card bg-walnut border-parchment p-4 p-md-5 shadow-lg">
-                    <h2 class="h4 mb-4 text-capitalize fw-normal text-parchment">Recent Signatures</h2>
+            <div class="col-md-7">
+                <div class="p-2">
+                    <h2 class="h4 mb-2 fw-normal italic">Historical Reflections</h2>
+                    <p class="text-parchment-muted small mb-4 border-bottom border-parchment pb-3">Signatures saved permanently in your current browser ledger context.</p>
                     
-                    <!-- Entry 1 -->
-                    <div class="py-4 ledger-entry">
-                        <p class="fs-5 lh-lg text-parchment italic mb-3">
-                            "A beautiful escape. Reading these pieces felt exactly like sitting in a quiet, dust-filled library while a heavy rain poured outside. Thank you for sharing your backend."
-                        </p>
-                        <div class="d-flex justify-content-between align-items-center">
-                            <strong class="text-parchment-muted font-monospace small">— Arthur Pendelton</strong>
-                            <span class="text-parchment-muted small font-monospace">June 2026</span>
+                    <div id="ledgerContainer">
                         </div>
-                    </div>
-
-                    <!-- Entry 2 -->
-                    <div class="py-4 ledger-entry">
-                        <p class="fs-5 lh-lg text-parchment italic mb-3">
-                            "Your words capture a melancholic truth that I have carried for years but have never been able to properly articulate. The 'Architecture of Silence' deeply resonated with me."
-                        </p>
-                        <div class="d-flex justify-content-between align-items-center">
-                            <strong class="text-parchment-muted font-monospace small">— E.S.</strong>
-                            <span class="text-parchment-muted small font-monospace">May 2026</span>
-                        </div>
-                    </div>
-
-                    <!-- Entry 3 -->
-                    <div class="py-4 ledger-entry">
-                        <p class="fs-5 lh-lg text-parchment italic mb-3">
-                            "Stumbled upon this desk by chance. I am leaving a little lighter than when I arrived."
-                        </p>
-                        <div class="d-flex justify-content-between align-items-center">
-                            <strong class="text-parchment-muted font-monospace small">— Anonymous</strong>
-                            <span class="text-parchment-muted small font-monospace">April 2026</span>
-                        </div>
-                    </div>
-
                 </div>
             </div>
-
         </div>
     </main>
 
