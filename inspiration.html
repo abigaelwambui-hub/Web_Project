@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Digital Muses | Ink & Solitude</title>
-    <!-- Bootstrap 5 CSS -->
+    <title>The Writer's Desk | Inspiration Moodboard</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body { background-color: #2b1e16; color: #f4eae1; font-family: 'Georgia', serif; }
@@ -12,15 +11,27 @@
         .text-parchment { color: #f4eae1 !important; }
         .text-parchment-muted { color: #c9af96 !important; opacity: 0.8; }
         .border-parchment { border-color: #5c4331 !important; }
-        .inspiration-card { border-left: 3px solid #c9af96 !important; }
+        
+        /* Custom Moodboard Cards */
+        .inspire-card {
+            background-color: #3d2b1f;
+            border: 1px solid #5c4331;
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+        .inspire-card:hover {
+            transform: translateY(-5px);
+            border-color: #c9af96;
+        }
     </style>
 </head>
 <body>
 
-    <!-- Global Navbar -->
     <nav class="navbar navbar-expand-xl bg-walnut border-bottom border-parchment py-3">
         <div class="container-fluid">
             <a class="navbar-brand text-parchment fw-bold" href="index.html">✒️ Ink & Solitude</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon" style="filter: invert(1);"></span>
+            </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto text-uppercase fs-7 small">
                     <li class="nav-item"><a class="nav-link text-parchment-muted mx-2" href="index.html">Home</a></li>
@@ -28,7 +39,7 @@
                     <li class="nav-item"><a class="nav-link text-parchment-muted mx-2" href="poetry.html">Poetry Archive</a></li>
                     <li class="nav-item"><a class="nav-link text-parchment-muted mx-2" href="writing.html">Prose & Essays</a></li>
                     <li class="nav-item"><a class="nav-link text-parchment-muted mx-2" href="quotes.html">Quotes Wall</a></li>
-                    <li class="nav-item"><a class="nav-link text-parchment active fw-bold" href="inspiration.html">Inspiration</a></li>
+                    <li class="nav-item"><a class="nav-link text-parchment active fw-bold mx-2" href="inspiration.html">Inspiration</a></li>
                     <li class="nav-item"><a class="nav-link text-parchment-muted mx-2" href="about.html">The Author</a></li>
                     <li class="nav-item"><a class="nav-link text-parchment-muted mx-2" href="contact.html">Subscriptions</a></li>
                     <li class="nav-item"><a class="nav-link text-parchment-muted mx-2" href="guestbook.html">Guestbook</a></li>
@@ -37,53 +48,52 @@
         </div>
     </nav>
 
-    <!-- Header Section -->
-    <header class="container text-center py-5 my-3">
-        <h1 class="display-5 fw-normal text-capitalize">The Inspiration</h1>
-        <p class="lead text-parchment-muted fs-6">The architecture of my vulnerability and the reason these words leave my desk.</p>
-    </header>
+    <main class="container my-5">
+        <div class="row mb-5 text-center">
+            <div class="col-md-8 mx-auto">
+                <h1 class="display-5 mb-3 fw-light italic">The Moodboard</h1>
+                <p class="text-parchment-muted small">A curated collection of sensory coordinates, echoes, and creative undercurrents that fuel the writing process.</p>
+            </div>
+        </div>
 
-    <!-- Core Philosophy Content -->
-    <main class="container my-4" style="max-width: 800px;">
-        <div class="row g-5">
-            
-            <!-- Section 1: Why I Write -->
-            <div class="col-12">
-                <div class="card bg-walnut border-parchment p-4 p-md-5 shadow-lg inspiration-card">
-                    <h2 class="h3 text-capitalize fw-normal mb-4">Why I Write</h2>
-                    <p class="fs-5 lh-lg text-parchment">
-                        The world dictates that we must remain strong, unyielding, and completely detached from our emotions—treating vulnerability as an outright flaw. So, where do I go to safely collapse into my own feelings? 
-                    </p>
-                    <p class="fs-5 lh-lg text-parchment">
-                        I go to my books. I have filled over eleven journals completely with raw words that capture precisely how I felt in exact, fleeting moments of time. 
-                    </p>
-                    <p class="text-parchment-muted italic my-3 ps-3 border-start border-parchment">
-                        These written archives allow me to relive chapters of my life just as vividly as the moments they were born, preserving the absolute pinnacle of my emotions. 
-                    </p>
-                    <p class="fs-5 lh-lg text-parchment">
-                        My words refuse to let me forget. They constantly remind me that I am complex, no matter how simple or flat the outside world tries to define me. Facing different situations uncovers entirely different sides of who I am, serving as a dynamic record of my personal evolution and growth.
-                    </p>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="card inspire-card h-100 p-4 rounded shadow-sm text-parchment">
+                    <div class="card-body p-0">
+                        <span class="font-monospace small text-parchment-muted d-block mb-2">LITERARY ANCHOR</span>
+                        <h2 class="h5 fw-normal mb-3">Jorge Luis Borges</h2>
+                        <p class="small lh-lg text-parchment-muted italic">"The concepts of infinite libraries, circular labyrinths, and memory architecture heavily dictate how structural layout choices are handled in these stanzas."</p>
+                    </div>
                 </div>
             </div>
 
-            <!-- Section 2: Why I Share -->
-            <div class="col-12 mb-5">
-                <div class="card bg-walnut border-parchment p-4 p-md-5 shadow-lg inspiration-card">
-                    <h2 class="h3 text-capitalize fw-normal mb-4">Why I Share</h2>
-                    <p class="fs-5 lh-lg text-parchment">
-                        To those on the outside, I might look like an unshakeable stone wall. But behind that exterior sits a chaotic backend—thousands of intersecting thoughts running through my mind simultaneously that absolutely must find an escape route. 
-                    </p>
-                    <p class="fs-5 lh-lg text-parchment">
-                        I choose to share these pieces of poetry and prose to dismantle that wall. By showing the raw backend of my internal world, I hope to prove to anyone reading along that they are allowed to let their own thousands of thoughts out, too.
-                    </p>
+            <div class="col-md-4">
+                <div class="card inspire-card h-100 p-4 rounded shadow-sm text-parchment">
+                    <div class="card-body p-0">
+                        <span class="font-monospace small text-parchment-muted d-block mb-2">AUDITORY ATMOSPHERE</span>
+                        <h2 class="h5 fw-normal mb-3">Midnight Nocturnes</h2>
+                        <p class="small lh-lg text-parchment-muted italic">"Chopin’s solo piano works, mixed with the steady rhythm of a real-time thunderstorm tracker, provide the exact dynamic background noise required to compose prose."</p>
+                    </div>
                 </div>
             </div>
 
+            <div class="col-md-4">
+                <div class="card inspire-card h-100 p-4 rounded shadow-sm text-parchment">
+                    <div class="card-body p-0">
+                        <span class="font-monospace small text-parchment-muted d-block mb-2">VISUAL LANDSCAPE</span>
+                        <h2 class="h5 fw-normal mb-3">The Architecture of Decay</h2>
+                        <p class="small lh-lg text-parchment-muted italic">"Abandoned stone cloisters, dust motes caught in heavy morning illumination beams, and ink-stained oak desks form the core imagery database."</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </main>
 
-    <!-- Place this right before </body> -->
-    <script src="script.js"></script>
+    <footer class="container text-center py-5 mt-5 border-top border-parchment">
+        <p class="text-parchment-muted small font-monospace">© 2026 Ink & Solitude • Built for Web Application Design Frameworks</p>
+    </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
