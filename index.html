@@ -34,15 +34,17 @@
 <body>
 
     <!-- 9-Page Master Navbar -->
-    <nav class="navbar navbar-expand-xl bg-walnut border-bottom border-parchment py-3">
+     <nav class="navbar navbar-expand-xl bg-walnut border-bottom border-parchment py-3">
         <div class="container-fluid">
-            <a class="navbar-brand text-parchment fw-bold tracking-wide" href="index.html">✒️ Ink & Solitude</a>
-            <button class="navbar-toggler border-sepia" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon" style="filter: invert(1);"></span>
+            <a class="navbar-brand text-parchment fw-bold" href="index.html">✒️ Ink & Solitude</a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" style="border-color: #c9af96;">
+                <span class="navbar-toggler-icon" style="filter: invert(1) sepia(50%);"></span>
             </button>
+            
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto text-uppercase fs-7 small">
-                    <li class="nav-item"><a class="nav-link text-parchment active fw-bold mx-2" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link text-parchment-muted mx-2" href="index.html">Home</a></li>
                     <li class="nav-item"><a class="nav-link text-parchment-muted mx-2" href="weekly.html">Weekly Poem</a></li>
                     <li class="nav-item"><a class="nav-link text-parchment-muted mx-2" href="poetry.html">Poetry Archive</a></li>
                     <li class="nav-item"><a class="nav-link text-parchment-muted mx-2" href="writing.html">Prose & Essays</a></li>
@@ -55,7 +57,7 @@
             </div>
         </div>
     </nav>
-
+    
     <!-- Hero Header -->
     <header class="container text-center py-5 my-4">
         <h1 class="display-3 fw-light italic">Speaking from the Pages</h1>
@@ -117,7 +119,7 @@
 
     <!-- Bootstrap JS Bundle -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Place this right before </body> -->
+    
     <script src="script.js"></script>
 </body>
 </html>
