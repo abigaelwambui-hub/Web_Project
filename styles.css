@@ -1,0 +1,103 @@
+/* ==========================================
+   1. GLOBAL ARCHITECTURE & CORE THEME
+   ========================================== */
+body { 
+    background-color: #2b1e16; 
+    color: #f4eae1; 
+    font-family: 'Georgia', serif; 
+}
+
+.bg-walnut { 
+    background-color: #3d2b1f !important; 
+}
+
+.text-parchment { 
+    color: #f4eae1 !important; 
+}
+
+.text-parchment-muted { 
+    color: #c9af96 !important; 
+    opacity: 0.85; 
+}
+
+.border-parchment { 
+    border-color: #5c4331 !important; 
+}
+
+/* ==========================================
+   2. BUTTONS & LINK UTILITIES
+   ========================================== */
+.btn-sepia, .btn-sepia-outline { 
+    border-color: #c9af96; 
+    color: #c9af96; 
+    background: transparent;
+    transition: all 0.3s ease;
+}
+
+.btn-sepia:hover, .btn-sepia.active, .btn-sepia-outline:hover { 
+    background-color: #c9af96; 
+    color: #2b1e16; 
+}
+
+/* ==========================================
+   3. COMPONENTS & CARDS (Home, Quotes, Moodboard)
+   ========================================== */
+/* Uniform layout for image cards on home page */
+.uniform-img {
+    height: 250px;
+    object-fit: cover;
+    width: 100%;
+    transition: transform 0.3s ease;
+}
+
+/* Quote cards interaction animation */
+.quote-box { 
+    transition: transform 0.2s ease; 
+}
+.quote-box:hover { 
+    transform: translateY(-5px); 
+}
+
+/* Inspiration page moodboard cards */
+.inspire-card {
+    background-color: #3d2b1f;
+    border: 1px solid #5c4331;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+.inspire-card:hover {
+    transform: translateY(-5px);
+    border-color: #c9af96;
+}
+
+/* ==========================================
+   4. FORM COMPONENT INPUTS (Contact & Guestbook)
+   ========================================== */
+.form-control, .form-check-input { 
+    background-color: #2b1e16 !important; 
+    border-color: #5c4331 !important; 
+    color: #f4eae1 !important; 
+}
+
+.form-control:focus { 
+    border-color: #c9af96 !important; 
+    box-shadow: 0 0 0 0.25rem rgba(201, 175, 150, 0.25) !important;
+}
+
+.form-control::placeholder { 
+    color: #8c7361 !important; 
+}
+
+/* ==========================================
+   5. BOOTSTRAP INTERACTIVE OVERRIDES (Modals & Accordion)
+   ========================================== */
+/* Custom modal boxes for poetry and essays */
+.modal-content, .modal-content-parchment { 
+    background-color: #3d2b1f; 
+    border: 1px solid #c9af96; 
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+/* Accordion controls for text consistency */
+.accordion-button::after {
+    filter: invert(1) sepia(100%) saturate(100%);
+}
