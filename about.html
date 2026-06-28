@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Author | Ink & Solitude</title>
-    <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body { 
@@ -46,11 +45,19 @@
             color: #c9af96;
             line-height: 1;
         }
+        /* Portrait Styling to Blend Image with the Theme */
+        .poet-portrait {
+            max-width: 210px;
+            border: 2px solid #c9af96;
+            padding: 6px;
+            background-color: #2b1e16;
+            /* Subtle sepia tint to make colorful photos match the dark academia aesthetic */
+            filter: sepia(20%) contrast(1.05) brightness(0.95);
+        }
     </style>
 </head>
 <body>
 
-    <!-- Global Navigation Bar -->
     <nav class="navbar navbar-expand-xl bg-walnut border-bottom border-parchment py-3">
         <div class="container-fluid">
             <a class="navbar-brand text-parchment fw-bold" href="index.html">✒️ Ink & Solitude</a>
@@ -73,32 +80,15 @@
         </div>
     </nav>
 
-    <!-- Main Content Container -->
     <main class="container my-5 py-4">
         <div class="row g-5 align-items-center justify-content-center">
             
-            <!-- Left Column: Visual Emblem & Stats Card -->
             <div class="col-lg-4 text-center">
                 <div class="card bg-walnut border-parchment p-4 p-md-5 shadow-lg h-100">
                     
-                    <!-- Custom SVG Illustration of Stacked Journals (The 11 Books) -->
-                    <svg class="mx-auto mb-4" width="160" height="160" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <!-- Book Stack Base -->
-                        <path d="M15 75 L85 75 L80 85 L20 85 Z" fill="#2b1e16" stroke="#c9af96" stroke-width="1.5" />
-                        <path d="M18 62 L82 62 L78 72 L22 72 Z" fill="#2b1e16" stroke="#c9af96" stroke-width="1.5" />
-                        <path d="M22 49 L78 49 L74 59 L26 59 Z" fill="#2b1e16" stroke="#c9af96" stroke-width="1.5" />
-                        
-                        <!-- Top Open Journal -->
-                        <path d="M25 35 Q50 42 75 35 L75 42 Q50 49 25 42 Z" fill="#3d2b1f" stroke="#c9af96" stroke-width="1.5" />
-                        
-                        <!-- Inkwell and Quill -->
-                        <rect x="35" y="15" width="14" height="14" rx="2" fill="#2b1e16" stroke="#c9af96" stroke-width="1.5" />
-                        <line x1="45" y1="20" x2="68" y2="2" stroke="#c9af96" stroke-width="1.5" stroke-linecap="round" />
-                        <!-- Decorative feather lines on quill -->
-                        <line x1="58" y1="10" x2="62" y2="7" stroke="#c9af96" stroke-width="1" />
-                        <line x1="54" y1="13" x2="58" y2="10" stroke="#c9af96" stroke-width="1" />
-                        <line x1="50" y1="16" x2="54" y2="13" stroke="#c9af96" stroke-width="1" />
-                    </svg>
+                    <div class="mx-auto mb-4">
+                        <img src="images/poet.jpeg" alt="A. Wambui Portrait" class="img-fluid rounded shadow poet-portrait">
+                    </div>
 
                     <h2 class="h5 text-parchment text-uppercase tracking-wide mb-1">A. Wambui</h2>
                     <p class="text-parchment-muted small italic">Architect of Words</p>
@@ -117,7 +107,6 @@
                 </div>
             </div>
 
-            <!-- Right Column: The Author's Personal Philosophy -->
             <div class="col-lg-7">
                 <div class="card bg-walnut border-parchment p-4 p-md-5 shadow-lg">
                     <h1 class="display-6 fw-normal text-parchment mb-4">Behind the Wall</h1>
@@ -152,9 +141,7 @@
         </div>
     </main>
 
-    <!-- Bootstrap JS Bundle -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Place this right before </body> -->
     <script src="script.js"></script>
 </body>
 </html>
